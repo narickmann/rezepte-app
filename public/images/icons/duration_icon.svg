@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="512" height="512" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(.91103 0 0 .91103 22.776 22.776)" stroke-width="50">
+  <circle cx="256" cy="256" r="256.3" fill="#fff" fill-opacity=".50196" stroke="#004b04" stroke-width="49.395"/>
+  <rect x="231.3" y="91.352" width="49.395" height="164.65" rx="24.697" ry="27.236" fill="#004b04"/>
+  <rect transform="rotate(130)" x="-7.0381" y="-572.23" width="49.395" height="247.05" rx="24.697" ry="27.583" fill="#004b04"/>
+ </g>
+</svg>

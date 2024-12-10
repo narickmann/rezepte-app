@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+}
+
+thead {
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+#ingredient_field input {
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.ingredient_btn {
+  background: #CFE8D0;
+  border: 1px solid #004B04;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.ingredient_btn:hover {
+  background: #A0D2A1;
+}
+
+.ingredient_btn:active {
+  transform: translate(1px, 1px);
+}

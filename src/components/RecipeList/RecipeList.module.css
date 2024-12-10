@@ -1,0 +1,11 @@
+.recipe_preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.recipe_list {
+  margin: auto;
+  width: 60vw;
+  min-height: 100vh;
+}

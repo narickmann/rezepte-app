@@ -1,0 +1,37 @@
+.recipe_preview {
+  width: 270px;
+  height: 100%;
+  border: 1px solid #A0D2A1;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: #222;
+}
+
+.short_infos {
+  display: flex;
+  gap: 0.3rem;
+  margin: auto;
+}
+
+.recipe_preview figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0 0.5rem;
+}
+
+.recipe_preview figcaption>* {
+  margin: 0.3rem 0;
+  transition: 0.5s;
+}
+
+.recipe_preview h2:hover {
+  color: #004b04;
+  transition: 0.5s;
+}

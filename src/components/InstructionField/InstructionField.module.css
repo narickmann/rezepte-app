@@ -1,0 +1,44 @@
+.instructions {
+  display: flex;
+  align-items: center;
+}
+
+.instructions>textarea {
+  flex: 1 0 0;
+}
+
+.instructions textarea[id*=step] {
+  margin: 0.3rem 0.5rem;
+}
+
+.add_instructions_btn,
+.remove_instructions_btn {
+  border-radius: 3px;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  outline: none;
+  margin: 0.5rem 0;
+}
+
+.add_instructions_btn:active,
+.remove_instructions_btn:active {
+  transform: translate(1px, 1px);
+}
+
+.add_instructions_btn {
+  background: #CFE8D0;
+  border: 1px solid #004B04;
+}
+
+.add_instructions_btn:hover {
+  background: #A0D2A1;
+}
+
+.remove_instructions_btn {
+  background: #FF8080;
+  border: 1px solid #ff4040;
+}
+
+.remove_instructions_btn:hover {
+  background: #ff4040;
+}

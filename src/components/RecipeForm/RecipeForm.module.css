@@ -1,0 +1,129 @@
+.recipe_form {
+  width: 50vw;
+  margin: auto;
+}
+
+.recipe_form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  background: rgba(207, 232, 208, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.recipe_form legend {
+  color: #004B04;
+  font-weight: 700;
+  background: #CFE8D0;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px rgba(0, 75, 4, 0.4);
+  margin-bottom: 0.5rem;
+}
+
+.recipe_form .row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.recipe_form .row input {
+  width: 100%;
+}
+
+.recipe_form .inner_row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.recipe_form label,
+.recipe_form small {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.recipe_form input:not([type='file']),
+.recipe_form textarea {
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+  border: 1px solid #8f8f9d;
+  border-radius: 3px;
+}
+
+.recipe_form input:not([type='file']):focus,
+.recipe_form textarea:focus,
+.recipe_form select:focus {
+  outline: none;
+  border: 1px solid #004B04;
+}
+
+.recipe_form select {
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  border-radius: 3px;
+}
+
+.recipe_form input[type='file'] {
+  font-size: 0.75rem;
+}
+
+.recipe_form input::file-selector-button {
+  background: #CFE8D0;
+  border: 1px solid #004B04;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  outline: none;
+  margin: 0.5rem 0.5rem 0.3rem 0;
+}
+
+.recipe_form input::file-selector-button:hover {
+  background: #A0D2A1;
+}
+
+.recipe_form input::file-selector-button:active {
+  transform: translate(1px, 1px);
+}
+
+.recipe_form input[id*='time'] {
+  width: 4rem;
+}
+
+.recipe_form .submit_btn {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #004B04;
+  background: #A0D2A1;
+  box-shadow: 0 0 5px 3px rgba(0, 75, 4, 0.4);
+}
+
+.recipe_form .submit_btn:hover {
+  background: #004B04;
+  color: #F5F5F5;
+}
+
+.recipe_form .submit_btn:active,
+.recipe_form .cancel_btn:active {
+  transform: translate(1px, 1px);
+}
+
+.recipe_form .cancel_btn {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ff4040;
+  background: #FF8080;
+  box-shadow: 0 0 5px 3px rgba(255, 64, 64, 0.4);
+}
+
+.recipe_form .cancel_btn:hover {
+  background: #ff4040;
+  color: #F5F5F5;
+}
