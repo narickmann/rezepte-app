@@ -1,6 +1,10 @@
-.favorite_list { 
+.recipe_list {
+  min-height: calc(100vh - 245px);
+}
+
+.recipe_preview, .no_recipes {
   width: 70vw;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .recipe_preview {
@@ -10,8 +14,7 @@
   gap: 1rem;
 }
 
-.recipe_preview * {
-  position: relative;
+.recipe_preview>* {
   max-width: 100%;
   overflow: hidden;
 }
@@ -50,26 +53,7 @@
   }
 }
 
-.remove_favorite {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid #ff4040;
-  background: #FF8080;
-  box-shadow: 0 0 5px 3px rgba(255, 64, 64, 0.4);
-  transition: 0.5s;
-}
-
-.remove_favorite img {
-  width: 48px;
-  height: 48px;
-  padding: 0.25rem;
-}
-
-.remove_favorite:hover {
-  background: #ff4040;
-  color: #F5F5F5;
+h1 {
+  padding: 1rem 0;
+  text-align: center;
 }

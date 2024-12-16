@@ -1,0 +1,90 @@
+.login_form {
+  width: 40vw;
+  margin: auto;
+  height: calc(100vh - 245px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.login_form fieldset {
+  padding: 1rem;
+  background: rgba(207, 232, 208, 0.5);
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  border: 1px solid #004B04;
+  box-shadow: 0 0 5px 3px rgba(0, 75, 4, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.login_form fieldset label,
+.login_form fieldset input {
+  margin: auto;
+  width: 75%;
+}
+
+.login_form legend {
+  color: #004B04;
+  font-weight: 700;
+  background: #F5F5F5;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px rgba(0, 75, 4, 0.4);
+  margin-bottom: 0.5rem;
+  border: 1px solid #004B04;
+}
+
+.login_form label {
+  text-align: start;
+  padding-bottom: 0.3rem;
+}
+
+.login_form input {
+  font-size: 1rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #8f8f9d;
+  border-radius: 3px;
+}
+
+.login_form input:focus {
+  outline: none;
+  border: 1px solid #004B04;
+}
+
+.btns {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.login_form .submit_btn {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #004B04;
+  background: #A0D2A1;
+  box-shadow: 0 0 5px 3px rgba(0, 75, 4, 0.4);
+  transition: 0.5s;
+}
+
+.login_form .submit_btn:hover {
+  background: #004B04;
+  color: #F5F5F5;
+}
+
+.login_form .submit_btn:active {
+  transform: translate(1px, 1px);
+}
+
+.error {
+  width: 75%;
+  height: 1.2rem;
+  font-size: 0.9rem;
+  text-align: end;
+  color: #ff4040;
+  margin: auto;
+  padding-top: 0.3rem;
+}

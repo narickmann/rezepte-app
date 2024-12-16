@@ -1,4 +1,4 @@
-import './UserLogin.module.css';
+import styles from './UserLogin.module.css';
 
 import md5 from 'md5';
 import { useState } from 'react';
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const UserLogin = () => {
 
   const navigate = useNavigate();
-  
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -78,40 +78,41 @@ const UserLogin = () => {
 
   return (
     <>
-      <form>
-        <legend>Login</legend>
+      <form className={styles.login_form}>
+        <fieldset>
+          <legend>Login</legend>
 
-        <label htmlFor='username'>Username</label>
-        <input
-          id='username'
-          type='text'
-          name='username'
-          value={username}
-          onChange={event => setUsername(event.target.value)}
-        ></input>
-        {usernameError && <small className="error">{usernameError}</small>}
+          <label htmlFor='username'>Username</label>
+          <input
+            id='username'
+            type='text'
+            name='username'
+            value={username}
+            onChange={event => setUsername(event.target.value)}
+          ></input>
+          <small className={styles.error}>{usernameError}</small>
 
-        <br></br>
+          <label htmlFor='password'>Passwort</label>
+          <input
+            id='password'
+            type='password'
+            name='password'
+            value={password}
+            onChange={event => setPassword(event.target.value)}
+          ></input>
+          <small className={styles.error}>{passwordError}</small>
 
-        <label htmlFor='password'>Passwort</label>
-        <input
-          id='password'
-          type='password'
-          name='password'
-          value={password}
-          onChange={event => setPassword(event.target.value)}
-        ></input>
-        {passwordError && <small className="error">{passwordError}</small>}
+        </fieldset>
 
-        <br></br>
+        <div className={styles.btns}>
+          <button className={styles.submit_btn} type="button" onClick={handleLogin}>
+            Login
+          </button>
 
-        <button className="submit_btn" type="button" onClick={handleLogin}>
-          Login
-        </button>
-
-        <button className="submit_btn" type="button" onClick={handleNewUser}>
-          Registrieren
-        </button>
+          <button className={styles.submit_btn} type="button" onClick={handleNewUser}>
+            Registrieren
+          </button>
+        </div>
 
       </form>
     </>

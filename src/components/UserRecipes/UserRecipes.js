@@ -44,7 +44,7 @@ const UserRecipes = () => {
     <>
       <div className={styles.user_recipes}>
         <h1>Deine Rezepte</h1>
-        <div className='recipe_preview'>{renderUserRecipes()}</div>
+        <div className={styles.recipe_preview}>{renderUserRecipes()}</div>
       </div>
     </>
   )

@@ -1,4 +1,4 @@
-import './SearchResults.css';
+import styles from './SearchResults.module.css';
 
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -35,7 +35,7 @@ const SearchResults = () => {
         key={index}
         title={recipe.title}
         description={recipe.description}
-        time={recipe.cooking_time}
+        cooking_time={recipe.cooking_time}
         difficulty={recipe.difficulty}
         id={recipe._id}
       />
@@ -45,15 +45,16 @@ const SearchResults = () => {
   return (
     <>
       <Header />
-      <SearchBar onSearch={handleSearch} />
-      <h1>Rezeptergebnisse für: {searchTerm}</h1>
-      <div className='recipe_preview'>
-        {recipes.length > 0 || newRecipes.length > 0
-          ? renderRecipePreview()
-          : <p>Keine passenden Rezepte gefunden.</p>
-        }
+      <div className={styles.recipe_list}>
+        <SearchBar onSearch={handleSearch} />
+        <h1>Rezeptergebnisse für: {searchTerm}</h1>
+        <div>
+          {recipes.length > 0 || newRecipes.length > 0
+            ? <div className={styles.recipe_preview}>{renderRecipePreview()}</div>
+            : <p className={styles.no_recipes}>Keine passenden Rezepte gefunden.</p>
+          }
+        </div>
       </div>
-
       <Footer />
     </>
   )

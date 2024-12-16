@@ -78,7 +78,9 @@ const UserFavorites = () => {
             cooking_time={recipe.cooking_time}
             difficulty={recipe.difficulty}
             id={recipe._id} />
-          <button onClick={() => handleRemoveFavorite(recipe._id)} className={styles.remove_favorite}>Entfernen</button>
+          <button onClick={() => handleRemoveFavorite(recipe._id)} className={styles.remove_favorite}>
+            <img src='/images/icons/favorite_icon.svg' alt='Favorit entfernen'/>
+          </button>
         </div>
       )
     })

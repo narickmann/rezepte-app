@@ -1,14 +1,30 @@
 .search_bar {
-  width: 60vw;
+  width: 70vw;
   margin: auto;
   display: flex;
   gap: 1rem;
   font-size: 1rem;
+  justify-content: center;
 }
 
 .search_bar * {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 0.3rem;
+}
+
+select:hover {
+  background: #CFE8D0;
+  border: 1px solid #004B04;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid #004B04;
+}
+
+.search_bar input {
+  width: 100%;
+  margin: 0;
 }
 
 .search_bar button {

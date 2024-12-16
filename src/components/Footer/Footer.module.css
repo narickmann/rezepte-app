@@ -1,13 +1,12 @@
 Footer {
   background: #A0D2A1;
-  padding: 0.5rem;
-  text-align: center;
-  height: 100px;
-  display: flex;
-  box-shadow: 0 0 5px 5px rgba(0, 75, 4, 0.4);
+  padding: 0 0.5rem;
   margin-top: 1rem;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0 0 5px 5px rgba(0, 75, 4, 0.4);
 }
 
-Footer p {
-  margin: 0;
+p {
+  margin: auto;
 }
