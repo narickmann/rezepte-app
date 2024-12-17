@@ -4,17 +4,16 @@ import { connection, userDB, recipeDB } from '../db/database.js';
 
 const addNewUser = (request, response) => {
   let db = connection.use(userDB);
-  console.log('request.body: ', request.body);
 
   const user = request.body;
   const username = request.body.username;
 
-  if (!user) {
-    return response.status(400).json({ error: 'Bitte einen Nutzer angeben' });
+  if (!user || !username) {
+    return response.status(400).json({ error: 'Bitte einen Benutzernamen angeben' });
   }
 
   db.find({
-    selector: { username: username }
+    selector: { username: { $eq: username } }
   })
     .then(result => {
       if (result.docs.length > 0) {
@@ -39,15 +38,19 @@ const getUser = (request, response) => {
   const user = request.query.username;
 
   if (!user) {
-    return response.status(400).json({ error: 'Nutzer nicht gefunden' });
+    return response.status(400).json({ error: 'Beutzername fehlt' });
   }
 
-  db.find({ selector: { username: { $regex: `(?i).*${user}.*` } } })
-    .then(
-      res => response.json(res.docs)
-    ).catch(
-      error => response.status(500).send(`Fehler bei der Suche ${error}`)
-    )
+  db.find({ selector: { username: { $eq: user } } })
+    .then(res => {
+      if (res.docs.length === 0) {
+        return response.status(404).json({ error: 'Benutzername nicht gefunden' });
+      }
+      return response.json(res.docs[0]);
+    })
+    .catch(error => {
+      return response.status(500).send(`Fehler bei der Suche: ${error}`);
+    })
 }
 
 const getAllFavorites = (request, response) => {

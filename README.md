@@ -14,8 +14,9 @@ Das Projekt ist noch **Work-in-Progress** und wird in der Zukunft weiterentwicke
 ---
 
 ### Weitere Änderungen, die noch geplant sind:
-- **Benutzeroberfläche**: Verbesserung und Optimierung der Benutzeroberfläche für eine bessere Nutzererfahrung.
-- **Zugangskontrolle für Seiten**: Derzeit sind Seiten wie z. B. `http://localhost:3000/add-recipe` über direkte Links erreichbar, obwohl sie nur für angemeldete Nutzer zugänglich sein sollten. Diese Funktionalität wird noch angepasst, sodass nicht angemeldete Benutzer an der Navigation zu geschützten Seiten gehindert werden.
+- ~~**Benutzeroberfläche**: Verbesserung und Optimierung der Benutzeroberfläche für eine bessere Nutzererfahrung.~~
+- ~~**Zugangskontrolle für Seiten**: Derzeit sind Seiten wie z. B. `http://localhost:3000/add-recipe` über direkte Links erreichbar, obwohl sie nur für angemeldete Nutzer zugänglich sein sollten. Diese Funktionalität wird noch angepasst, sodass nicht angemeldete Benutzer an der Navigation zu geschützten Seiten gehindert werden.~~
+- ggf. **zulässige Benutzernamen**: Benutzernamen case-insensitive abgleichen -> Namen in Kleinbuchstaben in der DB speichern oder min. abgleichen, damit Benutzer nicht "doppelt" hinzugefügt werden können, weil ein ähnlicher Name verwendet wurde (Bsp: "Nadine" und "nadine").
 
 ---
 
