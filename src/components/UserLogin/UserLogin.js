@@ -2,11 +2,12 @@ import styles from './UserLogin.module.css';
 
 import md5 from 'md5';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const UserLogin = () => {
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -39,7 +40,8 @@ const UserLogin = () => {
           return;
         }
         localStorage.setItem('username', username);
-        navigate('/');
+        const redirectTo = location.state?.from?.pathname || "/";
+        navigate(redirectTo);
       })
       .catch(error => console.warn('Fehler: ', error));
   }
@@ -72,7 +74,8 @@ const UserLogin = () => {
     }).then(user => {
       console.log('Neuen Nutzer erstellt: ', user);
       localStorage.setItem('username', username);
-      navigate('/');
+      const redirectTo = location.state?.from?.pathname || "/";
+      navigate(redirectTo);
     }).catch(error => console.warn('Fehler: ', error));
   }
 

@@ -10,6 +10,7 @@ import NewRecipe from './views/NewRecipe/NewRecipe.js';
 import EditRecipe from './views/EditRecipe/EditRecipe.js';
 import Login from './views/Login/Login.js';
 import UserArea from './views/UserArea/UserArea.js';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.js';
 
 function App() {
   return (
@@ -19,13 +20,11 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path="/search-results" element={<SearchResults />} />
           <Route path="/recipe/:id" element={<RecipeDetail />} />
-
-          <Route path="/add-recipe" element={<NewRecipe />} />
-          <Route path="/edit-recipe/:id" element={<EditRecipe />} />
-
           <Route path="/login" element={<Login />} />
 
-          <Route path="/user-area" element={<UserArea />} />
+          <Route path="/add-recipe" element={<ProtectedRoute><NewRecipe /></ProtectedRoute>} />
+          <Route path="/edit-recipe/:id" element={<ProtectedRoute><EditRecipe /></ProtectedRoute>} />
+          <Route path="/user-area" element={<ProtectedRoute><UserArea /></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
     </>

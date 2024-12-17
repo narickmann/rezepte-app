@@ -1,10 +1,11 @@
 import styles from './Header.module.css';
 
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [username, setUsername] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
@@ -16,7 +17,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem('username');
     setUsername(null);
-    window.location.reload();
+    navigate('/');
   };
 
   return (
